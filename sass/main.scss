@@ -1,5 +1,13 @@
-#app {
-    h1 {
-        color : green;
-    }
-}
+@import './base/base';
+
+@import './utils/variables';
+
+@import './layout/header';
+@import './layout/location';
+@import './layout/hero';
+
+@import './components/btn';
+
+
+
+

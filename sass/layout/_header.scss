@@ -1,0 +1,13 @@
+header {
+    height: 63px;
+    display:flex;
+    align-items: flex-end;
+    justify-content: center;
+    .logo {
+        height: 36px;
+        margin-bottom: 2px;
+        img {
+            width: 162px;
+        }
+    }
+}

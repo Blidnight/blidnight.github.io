@@ -1,0 +1,17 @@
+section.location {
+    height:50px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--theme-gray);
+    
+    p {
+        width: 109px;
+        font-size: 16px;
+        position: relative;
+        i {
+            left: -29px;
+            position:absolute;
+        }
+    }
+}

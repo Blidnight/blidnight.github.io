@@ -1,5 +1,81 @@
-#app h1 {
-  color: green;
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --theme-light-green: #99E2D0;
+  --theme-green: #008766;
+  --theme-light-blue: #89C8FA;
+  --theme-blue: #003A68;
+  --theme-purple: #9356DC;
+  --theme-gray: #EAEAEA;
+  --theme-light-gray:#F6F6F6;
+}
+
+header {
+  height: 63px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+header .logo {
+  height: 36px;
+  margin-bottom: 2px;
+}
+header .logo img {
+  width: 162px;
+}
+
+section.location {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--theme-gray);
+}
+section.location p {
+  width: 109px;
+  font-size: 16px;
+  position: relative;
+}
+section.location p i {
+  left: -29px;
+  position: absolute;
+}
+
+section.hero {
+  text-align: center;
+  background-color: var(--theme-light-gray);
+  padding-top: 39px;
+  padding-bottom: 57px;
+}
+section.hero h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+section.hero p {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  margin: 27px 42px;
+}
+
+.btn {
+  padding: 13px 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: white;
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  border: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
