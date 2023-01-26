@@ -1,0 +1,60 @@
+.how-it-works {
+
+    .step {
+        margin-left:12px;
+        display:flex;
+        position:relative;
+        align-items: center;
+        padding: 27px 33px;
+        width: calc(100% - 12px);
+        height: 72px;
+        border-radius: 20px;
+        background-color: #F7F7F7;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+        font-size:16px;
+        margin-bottom: 25px;
+        transition: all 0.3s;
+        &--highlight {
+            &:hover {
+                background-color: #F5EDFF;
+                i {
+                    color : #9356DC;
+                }
+            }
+        }
+        i {
+            margin-right: 27px;
+            width:24px;
+            height:24px;
+            font-size:20px;
+            color:#7E7E7E;
+        }
+        .badge {
+            position:absolute;
+            left: -12px;
+            width: 24px;
+            height: 24px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--theme-purple);
+            border-radius:50%;
+            color:white;
+            font-size: 14px;
+        }
+    }
+
+    .steps {
+        display : flex;
+        flex-direction: column;
+    }
+
+    @media screen and (min-width: 992px) {
+        .steps {
+            flex-direction: row;
+            .step {
+                margin-right: 24px;
+            }
+        }
+    }
+}
