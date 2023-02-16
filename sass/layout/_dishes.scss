@@ -1,0 +1,126 @@
+.dishes {
+    width: 100%;
+    margin-top: -20px;
+    background-color: #f5f6f6;
+    border-radius: 30px;
+    padding: 32px 17px;
+
+    &__heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h3 {
+            font-family: 'Shrikhand';
+            font-style: italic;
+            font-weight: 400;
+            font-size: 28px;
+            line-height: 41px;
+        }
+        
+    }
+    &__favorite {
+        font-size: 22px;
+        position:relative;
+        i {
+            opacity: 0;
+            font-size: 22px;
+            transition: all 0.2s;
+            position: absolute;
+            right: 10px;
+            top: -12px;
+            
+        }
+
+        i.fa-solid {
+            opacity: 0;
+        }
+
+        i.fa-regular {
+            opacity: 1;
+        }
+
+        &:hover{
+            // background-color: red;
+            i.fa-solid {
+                opacity: 1;
+                background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            i.fa-regular {
+                opacity: 0;
+            }
+        }
+    }
+
+    &__type {
+        margin-top:40px;
+        h4{
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 19px;
+            text-transform: uppercase;
+        }
+        hr.type_hr {
+            border-color: #99E2D0;
+            border-width: 1.5px;
+            border-style:solid;
+            margin-top: 6px;
+            margin-bottom: 6px;
+            width: 40px;
+        }
+
+        ul {
+            li {
+                font-family: 'Roboto';
+                font-style: normal;
+                position:relative;
+                display:flex;
+                align-items: center;
+                background-color: white;
+                height:68px;
+                box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+                border-radius: 15.0431px;
+                padding: 12.0345px 6px;
+                gap: 10.03px;
+                margin-bottom: 12px;
+                .about {
+                    
+                    h5 {
+                        font-weight: 500;
+                        font-size: 18px;
+                        line-height: 21px;
+                    }
+
+                    p {
+                        font-weight: 300;
+                        font-size: 15px;
+                        line-height: 18px;
+                    }
+                }
+                .price {
+                    position: absolute;
+                    bottom: 10px;
+                    right: 10px;
+                    font-weight: 700;
+                    font-size: 15px;
+                    line-height: 18px;
+                }
+            }
+        }
+    }
+
+    .container {
+        margin-top: 28px;
+        width: 100%;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        .btn {
+            width: 186px;
+        }
+    }
+}

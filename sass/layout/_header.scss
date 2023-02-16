@@ -1,9 +1,20 @@
 header {
+    position: relative;
     height: 63px;
     display:flex;
     align-items: flex-end;
     justify-content: center;
+    i { 
+        position: absolute;
+        font-size: 20px;
+        left: 23px;
+        top: 26px;
+        cursor: pointer;
+        color:black;
+    }
     .logo {
+       
+        
         height: 36px;
         margin-bottom: 2px;
         img {
