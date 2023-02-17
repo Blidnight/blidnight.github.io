@@ -357,6 +357,32 @@ footer ul li:nth-child(1), footer ul li:nth-child(2) {
   object-fit: contain;
 }
 
+.dishes__type ul li:nth-child(1) {
+  animation-delay: 0s;
+}
+.dishes__type ul li:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.dishes__type ul li:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.dishes__type:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.dishes__type:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.dishes__type:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.dishes__type:nth-child(4) {
+  animation-delay: 0.9s;
+}
+
 .dishes {
   width: 100%;
   margin-top: -20px;
@@ -405,6 +431,11 @@ footer ul li:nth-child(1), footer ul li:nth-child(2) {
 }
 .dishes__type {
   margin-top: 40px;
+  animation-name: horizontalFadeIn;
+  animation-duration: 2s;
+  margin-left: 200px;
+  opacity: 0;
+  animation-fill-mode: forwards;
 }
 .dishes__type h4 {
   font-family: "Roboto";
@@ -425,16 +456,25 @@ footer ul li:nth-child(1), footer ul li:nth-child(2) {
 .dishes__type ul li {
   font-family: "Roboto";
   font-style: normal;
-  position: relative;
   display: flex;
   align-items: center;
   background-color: white;
   height: 68px;
   box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
   border-radius: 15.0431px;
-  padding: 12.0345px 6px;
+  overflow: hidden;
+  animation-name: horizontalFadeIn;
+  animation-duration: 2s;
+  margin-left: 200px;
+  opacity: 0;
+  animation-fill-mode: forwards;
   gap: 10.03px;
   margin-bottom: 12px;
+}
+.dishes__type ul li .about {
+  position: relative;
+  padding: 12.0345px 6px;
+  width: 100%;
 }
 .dishes__type ul li .about h5 {
   font-weight: 500;
@@ -445,6 +485,29 @@ footer ul li:nth-child(1), footer ul li:nth-child(2) {
   font-weight: 300;
   font-size: 15px;
   line-height: 18px;
+}
+.dishes__type ul li .check-mark, .dishes__type ul li .about {
+  transition: width 0.5s;
+}
+.dishes__type ul li .check-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 0px;
+  background-color: #99E2D0;
+  height: 100%;
+}
+.dishes__type ul li .check-mark i {
+  font-size: 21px;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.dishes__type ul li:hover .check-mark {
+  width: 60px;
+}
+.dishes__type ul li:hover .check-mark i {
+  opacity: 1;
 }
 .dishes__type ul li .price {
   position: absolute;
@@ -482,6 +545,16 @@ h2 {
   .container {
     max-width: 1050px;
     margin: 0 auto;
+  }
+}
+@keyframes horizontalFadeIn {
+  0% {
+    opacity: 0;
+    margin-left: 200px;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 0px;
   }
 }
 .btn {

@@ -1,9 +1,27 @@
+
+.dishes__type ul {
+    @for $b from 0 through 2 {
+        li:nth-child(#{$b + 1}) {
+            animation-delay: #{$b * 0.3}s;
+        }
+    }
+}
+
+@for $i from 0 through 3 {
+    .dishes__type:nth-child(#{$i + 1}) {
+        animation-delay: #{$i * 0.3}s;
+    }
+}
+
+
 .dishes {
     width: 100%;
     margin-top: -20px;
     background-color: #f5f6f6;
     border-radius: 30px;
     padding: 32px 17px;
+
+   
 
     &__heading {
         display: flex;
@@ -56,6 +74,11 @@
 
     &__type {
         margin-top:40px;
+        animation-name: horizontalFadeIn;
+        animation-duration: 2s;
+        margin-left: 200px;
+        opacity: 0;
+        animation-fill-mode: forwards;
         h4{
             font-family: 'Roboto';
             font-style: normal;
@@ -77,18 +100,26 @@
             li {
                 font-family: 'Roboto';
                 font-style: normal;
-                position:relative;
+            
                 display:flex;
                 align-items: center;
                 background-color: white;
                 height:68px;
                 box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
                 border-radius: 15.0431px;
-                padding: 12.0345px 6px;
+                overflow: hidden;
+                animation-name: horizontalFadeIn;
+                animation-duration: 2s;
+                margin-left: 200px;
+                opacity: 0;
+                animation-fill-mode: forwards;
+                
                 gap: 10.03px;
                 margin-bottom: 12px;
                 .about {
-                    
+                    position:relative;
+                    padding: 12.0345px 6px;
+                    width: 100%;
                     h5 {
                         font-weight: 500;
                         font-size: 18px;
@@ -99,6 +130,34 @@
                         font-weight: 300;
                         font-size: 15px;
                         line-height: 18px;
+                    }
+                }
+
+                .check-mark, .about {
+                    transition: width 0.5s;
+                }
+
+                .check-mark {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 0px;
+                    background-color:#99E2D0;
+                    height:100%;
+                    i {
+                        font-size: 21px;
+                        color: white;
+                        opacity: 0;
+                        transition: opacity 0.5s;
+                    }
+                }
+
+                &:hover {
+                    .check-mark {
+                        width: 60px;
+                        i {
+                            opacity: 1;
+                        }
                     }
                 }
                 .price {
@@ -112,6 +171,8 @@
             }
         }
     }
+
+
 
     .container {
         margin-top: 28px;

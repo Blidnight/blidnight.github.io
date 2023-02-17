@@ -17,3 +17,15 @@ h2 {
         margin: 0 auto;
     }
 }
+
+@keyframes horizontalFadeIn {
+    0% {
+        opacity: 0;
+        margin-left: 200px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-left: 0px;
+    }
+}
