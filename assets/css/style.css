@@ -493,7 +493,9 @@ footer ul li:nth-child(1), footer ul li:nth-child(2) {
 .dishes__type ul li .about {
   position: relative;
   padding: 12.0345px 6px;
+  padding-right: 40px;
   width: 100%;
+  text-overflow: ellipsis;
 }
 .dishes__type ul li .about h5 {
   font-weight: 500;
@@ -504,6 +506,9 @@ footer ul li:nth-child(1), footer ul li:nth-child(2) {
   font-weight: 300;
   font-size: 15px;
   line-height: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .dishes__type ul li .check-mark, .dishes__type ul li .about {
   transition: width 0.5s;

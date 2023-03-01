@@ -134,7 +134,9 @@
                 .about {
                     position:relative;
                     padding: 12.0345px 6px;
+                    padding-right:40px;
                     width: 100%;
+                    text-overflow: ellipsis;
                     h5 {
                         font-weight: 500;
                         font-size: 18px;
@@ -145,6 +147,10 @@
                         font-weight: 300;
                         font-size: 15px;
                         line-height: 18px;
+
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
                     }
                 }
 
